@@ -4,9 +4,10 @@ import { RouterProvider } from 'react-router-dom'
 import { Global } from './Global'
 import routes from './routes'
 
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <Global/>
-    <RouterProvider router={routes} />
+      <Global/>
+      <RouterProvider router={routes} />
   </React.StrictMode>,
 )

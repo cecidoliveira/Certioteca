@@ -1,6 +1,6 @@
 import { BoxImagem, Content, DivBody, DivContent } from "./StylesCertbody";
 
-function Pagebody() {
+function Certbody() {
 
   return (
     <DivBody>
@@ -32,4 +32,4 @@ function Pagebody() {
   );
 }
 
-export default Pagebody
+export default Certbody

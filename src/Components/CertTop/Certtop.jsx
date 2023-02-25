@@ -4,18 +4,19 @@ import { AddButton, DivTop, Imagem, Title } from './StylesCerttop';
 
 
 
-function Pagetop() {
+function Certtop() {
 
   return (
+    <>
     <DivTop>
         <Imagem src={logo} alt="logo de livros" />
 
         <Title>Certificados</Title>
 
         <AddButton href='/add'><IoAddCircle/></AddButton>
-        
     </DivTop>
+    </>
   );
 }
 
-export default Pagetop
+export default Certtop

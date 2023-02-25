@@ -1,7 +1,7 @@
 import { createGlobalStyle } from "styled-components";
 import imagem from './assets/detalhes.svg'
 
-export const Global = createGlobalStyle`
+export const Global = createGlobalStyle`   
     *{
         margin: 0;
         padding: 0;
@@ -10,7 +10,8 @@ export const Global = createGlobalStyle`
     :root{
         font-size: 62.5%;
     }
-    body {
+    :root body {
+        font-family: 'Roboto Mono', monospace;
         background-color: #7AC5E5;
         background-image: url(${imagem});
         background-size: cover;

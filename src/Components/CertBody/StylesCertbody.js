@@ -13,7 +13,7 @@ export const Content = styled.p`
     margin-top: 0.5rem;
     text-align: center;
     color: #10286C;
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 600;
 `;
 

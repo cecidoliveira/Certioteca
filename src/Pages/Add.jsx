@@ -1,11 +1,14 @@
-import Pagetop from "../Components/CertTop/Certtop";
+import Addbody from "../Components/AddBody/Addbody";
+import Addtop from "../Components/AddTop/Addtop";
+
 
 
 function Add() {
 
   return (
     <>
-      <Pagetop/>
+      <Addtop/>
+      <Addbody/>
     </>
   );
 }

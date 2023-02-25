@@ -1,12 +1,12 @@
-import Pagebody from "../Components/CertBody/Certbody";
-import Pagetop from "../Components/CertTop/Certtop";
+import Certbody from "../Components/CertBody/Certbody";
+import Certtop from "../Components/CertTop/Certtop";
 
 function Cert() {
 
   return (
     <>
-      <Pagetop/>
-      <Pagebody/>
+      <Certtop/>
+      <Certbody/>
     </>
   );
 }

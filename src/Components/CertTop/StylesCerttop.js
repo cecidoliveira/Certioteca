@@ -25,8 +25,8 @@ export const Title = styled.h1`
     background-color: #7AC5E5;
     border: #ffffff 0.4rem solid;
     color: #10286C;
-    font-family: 'Roboto', sans-serif;
-    font-size: 5rem;
+    font-weight: 600;
+    font-size: 4rem;
     padding: 2rem 10rem;
     
 `
