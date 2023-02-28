@@ -4,29 +4,58 @@ import { useState } from 'react';
 import { useCertStore } from '../../Store/Certioteca';
 
 function Addbody() {
-    const {biblioteca, addCert} = useCertStore(state => state)
+    const {addCert} = useCertStore(state => state)
     const [values, setValues] = useState();
 
-    console.log(biblioteca)
     const toast = useToast()
 
     function handleSendButton(){
+        values === undefined ? handleStatus(true) : Object.keys(values).length != 2 ? handleStatus(true) : handleStatus(false)
+    }   
 
-        toast({
-            description: "dados adicionandos a biblioteca!",
-            duration: 5000,
-            isClosable: true,
-            containerStyle: {
-                fontSize: '2rem'
+    function handleStatus(stats){
+        if(stats){
+            toast({
+                description: "preencha todas as informações !",
+                duration: 5000,
+                status: 'info',
+                isClosable: true,
+                containerStyle: {
+                    fontSize: '2rem'}
+            })
+        }
+        
+        else{
+            if(values.titulo != '' && values.data != ''){
+                addCert(values)
+
+                toast({
+                    description: "dados inseridos a biblioteca !",
+                    duration: 5000,
+                    status: 'success',
+                    isClosable: true,
+                    containerStyle: {
+                        fontSize: '2rem'}
+                })
             }
-        })
-        addCert(values)
+        
+            else{
+                toast({
+                    description: "preencha todas as informações !",
+                    duration: 5000,
+                    status: 'info',
+                    isClosable: true,
+                    containerStyle: {
+                        fontSize: '2rem'}
+                })
+            }
+        }
     }
 
     const handleChangedValues = (value) => {
         setValues(prevValue =>({
-            ...prevValue,
-            [value.target.name]: value.target.value
+                ...prevValue,
+                [value.target.name]: value.target.value
         }))
 
     }
@@ -38,9 +67,9 @@ function Addbody() {
                     <p>Titulo do certificado:</p>
                     <Input name='titulo' onChange={handleChangedValues} variant='flushed' focusBorderColor='white' />
                     <p>Data de recebimento:</p>
-                    <Input name='data' onChange={handleChangedValues} variant='flushed' focusBorderColor='white' size="lg" type="date"/>
+                    <Input name='data' onChange={handleChangedValues}  variant='flushed' focusBorderColor='white' size="lg" type="date"/>
                     <p>Arquivo do certificado:</p>
-                    <input name='file' type="file"/>
+                    <input name='arquivo'id='arquivo' type="file"/>
                     <Button onClick={handleSendButton}  colorScheme='blue' size='lg' variant='solid'>enviar</Button>
                 </DivBody>
             </ChakraProvider>
