@@ -12,7 +12,7 @@ export const Imagem = styled.img`
     height: 10rem;
 
 `
-export const AddButton = styled.a`
+export const AddButton = styled.p`
     font-size: 8rem;
     color: #ffffff;
 

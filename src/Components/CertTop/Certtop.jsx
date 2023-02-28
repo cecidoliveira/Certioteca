@@ -1,7 +1,7 @@
 import logo from '../../assets/logo.svg'
 import { IoAddCircle } from "react-icons/io5";
 import { AddButton, DivTop, Imagem, Title } from './StylesCerttop';
-
+import {Link} from "react-router-dom";
 
 
 function Certtop() {
@@ -13,7 +13,7 @@ function Certtop() {
 
         <Title>Certificados</Title>
 
-        <AddButton href='/add'><IoAddCircle/></AddButton>
+        <Link to="/add"><AddButton href='/add'><IoAddCircle/></AddButton></Link>
     </DivTop>
     </>
   );

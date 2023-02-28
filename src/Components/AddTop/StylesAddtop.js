@@ -11,7 +11,7 @@ export const DivTop = styled.div`
 export const Imagem = styled.img`
     height: 10rem;
 `
-export const CertButton = styled.a`
+export const CertButton = styled.p`
     display: flex;
     font-size: 8rem;
     color: #ffffff;

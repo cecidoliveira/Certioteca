@@ -27,7 +27,6 @@ function Certbody() {
             <Content>Introduction to IOT</Content>
             <Content>Data: 14/09/2021</Content>
         </DivContent>
-
     </DivBody>
   );
 }
